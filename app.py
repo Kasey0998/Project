@@ -16,6 +16,19 @@ login_manager.login_view = 'auth.login'
 
 
 from models.user import User
+from models.apartment import Apartment, Flat, ClientLead
+from routes.auth import auth_bp
+from routes.dashboard import dashboard_bp
+from routes.admin import admin_bp
+from routes.marketing import marketing_bp
+from routes.sales import sales_bp
+
+# Register blueprints
+app.register_blueprint(auth_bp)
+app.register_blueprint(dashboard_bp)
+app.register_blueprint(admin_bp)
+app.register_blueprint(marketing_bp)
+app.register_blueprint(sales_bp)
 
 @app.before_request
 def create_tables_and_admin():
