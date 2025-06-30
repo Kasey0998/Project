@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="dashboard-cards">
+    <div class="card">
+        <h3>Total Apartments</h3>
+        <p id="total_apartments">{{ total_apartments }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Sold</h3>
+        <p id="sold">{{ sold }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Pending</h3>
+        <p id="pending">{{ pending }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Not Interested</h3>
+        <p id="not_interested">{{ not_interested }}</p>
+    </div>
+</div>
