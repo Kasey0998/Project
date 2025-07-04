@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Marketing Dashboard{% endblock %}
+
+{% block content %}
+<h2>Marketing Dashboard</h2>
+
+<h3>Add Client Lead</h3>
+<form method="POST" action="{{ url_for('marketing.add_lead') }}">
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>Contact Number:</label><br>
+    <input type="text" name="contact" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Interested Apartment:</label><br>
+    <select name="apartment_id" required>
+        {% for apartment in apartments %}
+        <option value="{{ apartment.id }}">{{ apartment.name }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <button type="submit">Add Lead</button>
+</form>
+
+<h3>Pending Leads</h3>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Interested Apartment</th>
+    </tr>
+    {% for lead in leads %}
+        <tr>
+            <td>{{ lead.name }}</td>
+            <td>{{ lead.contact }}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.apartment.name if lead.apartment else 'N/A' }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
