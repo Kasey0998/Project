@@ -8,12 +8,10 @@ app.secret_key = 'supersecretkey'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///apartment.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'auth.login'
-
 
 from models.user import User
 from models.apartment import Apartment, Flat, ClientLead
@@ -42,5 +40,12 @@ def create_tables_and_admin():
             db.session.commit()
         app._tables_created = True
 
+@app.route('/')
+def index():
+    if current_user.is_authenticated:
+        return redirect(url_for('dashboard.dashboard'))
+    else:
+        return redirect(url_for('auth.login'))
+
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True)
