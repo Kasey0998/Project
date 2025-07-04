@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Sales Dashboard{% endblock %}
+
+{% block content %}
+<h2>Sales Dashboard</h2>
+
+<h3>Pending Leads</h3>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Interested Apartment</th>
+        <th>Actions</th>
+    </tr>
+    {% for lead in leads %}
+        <tr>
+            <td>{{ lead.name }}</td>
+            <td>{{ lead.contact }}</td>
+            <td>{{ lead.email }}</td>
+            <td>{{ lead.apartment.name if lead.apartment else 'N/A' }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('sales.mark_sold', lead_id=lead.id) }}" style="display:inline;">
+                    <button type="submit">Mark Sold</button>
+                </form>
+                <form method="POST" action="{{ url_for('sales.mark_not_interested', lead_id=lead.id) }}" style="display:inline;">
+                    <button type="submit">Mark Not Interested</button>
+                </form>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
