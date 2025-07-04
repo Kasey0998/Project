@@ -64,7 +64,6 @@ def delete_user(user_id):
     flash('User deleted successfully')
     return redirect(url_for('admin.manage_users'))
 
-
 @admin_bp.route('/apartments', methods=['GET', 'POST'])
 @login_required
 def manage_apartments():
