@@ -2,9 +2,7 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from flask_login import login_required, current_user
 from app import db
 from models.user import User
-from models.apartment import Apartment, Flat
-from models.apartment import Apartment, Flat, ClientLead # Ensure this is your lead model
-
+from models.apartment import Apartment, Flat, ClientLead 
 admin_bp = Blueprint('admin', __name__, url_prefix='/admin')
 
 @admin_bp.route('/users', methods=['GET', 'POST'])
