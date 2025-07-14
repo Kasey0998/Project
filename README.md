@@ -118,5 +118,49 @@ This Apartment Management System provides a robust, scalable, and secure solutio
 
 ---
 
+## 8. References :
+Flask code : https://flask.palletsprojects.com/en/stable/quickstart/
+Flask code : https://palletsprojects.com/
+Flask code : https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+Flask code : https://www.geeksforgeeks.org/python/flask-tutorial/
+Folder structure : https://explore-flask.readthedocs.io/en/latest/organizing.html  
+Blueprints : https://explore-flask.readthedocs.io/en/latest/blueprints.html
+Blueprints : https://flask.palletsprojects.com/en/stable/tutorial/views/
+Flask login : https://flask-login.readthedocs.io/en/latest/
+Routing : https://realpython.com/primer-on-jinja-templating/
+Routing : https://www.geeksforgeeks.org/python/flask-app-routing/
+Flask login : https://flask-login.readthedocs.io/en/latest/
+MySQL Alchemy : https://www.tutorialspoint.com/flask/flask_sqlalchemy.htm
+MySQL Alchemy : https://docs.sqlalchemy.org/en/20/orm/
+
+
+
+## Harvard style referencing :
+
+- Flask, (n.d.). *Quickstart — Flask Documentation*. [online] Available at: https://flask.palletsprojects.com/en/stable/quickstart/ [Accessed 14 Jul. 2025].  
+
+- Pallets Projects, (n.d.). *Pallets Projects*. [online] Available at: https://palletsprojects.com/ [Accessed 14 Jul. 2025].  
+  
+- Grinberg, M., (2017). *The Flask Mega-Tutorial Part I: Hello, World!*. [online] Available at: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world [Accessed 14 Jul. 2025].  
+  
+- GeeksforGeeks, (n.d.). *Flask Tutorial*. [online] Available at: https://www.geeksforgeeks.org/python/flask-tutorial/ [Accessed 14 Jul. 2025].  
+
+- Explore Flask, (n.d.). *Organizing your project*. [online] Available at: https://explore-flask.readthedocs.io/en/latest/organizing.html [Accessed 14 Jul. 2025].  
+
+- Explore Flask, (n.d.). *Blueprints*. [online] Available at: https://explore-flask.readthedocs.io/en/latest/blueprints.html [Accessed 14 Jul. 2025].  
+
+- Flask, (n.d.). *Views and Blueprints — Flask Tutorial*. [online] Available at: https://flask.palletsprojects.com/en/stable/tutorial/views/ [Accessed 14 Jul. 2025].  
+
+- Flask-Login, (n.d.). *Flask-Login Documentation*. [online] Available at: https://flask-login.readthedocs.io/en/latest/ [Accessed 14 Jul. 2025].  
+
+- Sturtz, C., (2021). *A Primer on Jinja Templating*. [online] Real Python. Available at: https://realpython.com/primer-on-jinja-templating/ [Accessed 14 Jul. 2025].  
+
+- GeeksforGeeks, (n.d.). *Flask App Routing*. [online] Available at: https://www.geeksforgeeks.org/python/flask-app-routing/ [Accessed 14 Jul. 2025].  
+
+- TutorialsPoint, (n.d.). *Flask - SQLAlchemy*. [online] Available at: https://www.tutorialspoint.com/flask/flask_sqlalchemy.htm [Accessed 14 Jul. 2025].  
+
+- SQLAlchemy, (n.d.). *SQLAlchemy ORM Documentation*. [online] Available at: https://docs.sqlalchemy.org/en/20/orm/ [Accessed 14 Jul. 2025].  
+
+
 *Prepared by: [Krishna Sharma]*  
 *Date: July 14, 2025*
