@@ -162,5 +162,5 @@ MySQL Alchemy : https://docs.sqlalchemy.org/en/20/orm/
 - SQLAlchemy, (n.d.). *SQLAlchemy ORM Documentation*. [online] Available at: https://docs.sqlalchemy.org/en/20/orm/ 
 
 
-*Prepared by: [Krishna Sharma]*  
+*Prepared by: Krishna Sharma*  
 *Date: July 14, 2025*
