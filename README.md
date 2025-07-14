@@ -109,17 +109,10 @@ instance/
 
 - Update `app.secret_key` in `app.py` for production use.
 - Change the database URI in `app.py` as needed.
-- Add or modify user roles and permissions in `models/user.py`.
 
 ---
 
-## 7. License
-
-MIT License (or specify your own).
-
----
-
-## 8. Conclusion
+## 7. Conclusion
 
 This Apartment Management System provides a robust, scalable, and secure solution for managing apartment-related operations. Its modular design and role-based access make it adaptable for various organizational needs.
 
