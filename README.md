@@ -1,11 +1,129 @@
-# Project
-**Project for DBS**: Programming for information systems
+# Apartment Management System  
+## Project Report
 
-**Project name**: CRM app for GomataVision
+---
 
-**Description** : The curernt situation for the GomataVision is they have diffrent applications for saving customers data and their project data.
-Here in this they are facing issue in relating the customers data with the projects data as they are unable to cocnlude their sales as per the advitisment. 
-As a solution we come up with a application which can hold and link the data between the leads and check for them as their are either being a customer before, and details such as these customer are interested or not, and other details.
+## 1. Introduction
 
+The GomataVision CRM System is a web-based platform designed to streamline the management of apartments, users, client leads, and sales activities. Built using Flask, SQLAlchemy, and Flask-Login, the system provides role-based access for administrators, marketing, and sales teams, ensuring efficient workflow and secure data handling.
 
-**Requirement** : The system is designed to bring customer and project management together into a single, easy-to-use platform. It will simplify how data is entered and accessed, helping the marketing team quickly evaluate and follow up on potential leads. Additionally, the system will generate useful reports and insights to support the operations team in planning and decision-making. To ensure data is handled securely and appropriately, access permissions will be based on the organization’s hierarchy, giving different levels of control to different roles.
+---
+
+## 2. Key Features
+
+- **Role-Based Access:** Supports Admin, Marketing, and Sales roles with tailored dashboards and permissions.
+- **User Authentication:** Secure login/logout functionality with Flask-Login.
+- **Admin Capabilities:** Manage users, apartments, and view real-time dashboard statistics.
+- **Marketing Workflow:** Add and track client leads, view pending leads.
+- **Sales Workflow:** Update lead status (sold/not interested), manage sales pipeline.
+- **Dashboard:** Real-time statistics and analytics for administrators.
+
+---
+
+## 3. System Architecture
+
+### 3.1 Folder Structure
+
+```
+app.py
+requirements.txt
+models/
+    __init__.py
+    apartment.py
+    user.py
+routes/
+    admin.py
+    auth.py
+    dashboard.py
+    marketing.py
+    sales.py
+static/
+    css/
+        style.css
+templates/
+    base.html
+    login.html
+    admin.html
+    admin_users.html
+    admin_apartments.html
+    edit_user.html
+    edit_apartment.html
+    dashboard.html
+    marketing.html
+    sales.html
+    unauthorized.html
+instance/
+    apartment.db
+```
+
+### 3.2 Main Components
+
+- **Models:**  
+  - `User`: Handles authentication and user roles.  
+  - `Apartment`: Represents apartment buildings.  
+  - `Flat`: Represents individual flats.  
+  - `ClientLead`: Tracks client leads and their status.
+
+- **Routes:**  
+  - `auth.py`: Authentication (login/logout).  
+  - `dashboard.py`: Dashboard views for each role.  
+  - `admin.py`: Admin management for users and apartments.  
+  - `marketing.py`: Lead management for marketing.  
+  - `sales.py`: Sales processing and lead updates.
+
+- **Templates:**  
+  - HTML templates for each page and role-specific dashboard.
+
+- **Static:**  
+  - CSS for styling.
+
+---
+
+## 4. Setup Instructions
+
+1. **Install Dependencies**
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. **Run the Application**
+   ```
+   python app.py
+   ```
+
+3. **Default Admin Credentials**
+   - Username: `admin`
+   - Password: `admin123`
+
+---
+
+## 5. Database
+
+- Uses SQLite (`instance/apartment.db`) by default.
+- Tables are auto-created on first run.
+- Can be configured for other databases via SQLAlchemy.
+
+---
+
+## 6. Customization & Security
+
+- Update `app.secret_key` in `app.py` for production use.
+- Change the database URI in `app.py` as needed.
+- Add or modify user roles and permissions in `models/user.py`.
+
+---
+
+## 7. License
+
+MIT License (or specify your own).
+
+---
+
+## 8. Conclusion
+
+This Apartment Management System provides a robust, scalable, and secure solution for managing apartment-related operations. Its modular design and role-based access make it adaptable for various organizational needs.
+
+---
+
+*Prepared by: [Krishna Sharma]*  
+*Date: July 14, 2025*
