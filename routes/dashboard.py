@@ -12,11 +12,11 @@ def dashboard():
     if role == 'admin':
         apartments = Apartment.query.all()
         total_sold = Flat.query.filter_by(status='sold').count()
-        interested = ClientLead.query.filter_by(status='pending').count()
+        pending = ClientLead.query.filter_by(status='pending').count()
         not_interested = ClientLead.query.filter_by(status='not_interested').count()
         return render_template('admin.html', apartments=apartments,
                                total_sold=total_sold,
-                               interested=interested,
+                               pending=pending,
                                not_interested=not_interested)
 
     elif role == 'marketing':
